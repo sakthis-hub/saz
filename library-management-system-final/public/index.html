@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="login-view" class="login">
+    <div class="login-art">
+      <div class="brand-big">Library</div>
+      <h1>Manage every book from one desk.</h1>
+      <p>Add books, issue and return them, and see what is available at a glance.</p>
+    </div>
+    <form id="login-form" class="login-card">
+      <h2>Welcome back</h2>
+      <p class="sub">Log in to your library account</p>
+      <fieldset class="roles">
+        <legend>I am a</legend>
+        <label><input type="radio" name="role" value="student" checked><span>Student</span></label>
+        <label><input type="radio" name="role" value="librarian"><span>Librarian</span></label>
+        <label><input type="radio" name="role" value="member"><span>Member</span></label>
+      </fieldset>
+      <label>Username <input name="username" required autocomplete="username"></label>
+      <label>Password
+        <span class="pw"><input type="password" name="password" required autocomplete="current-password"><button type="button" id="toggle-pw">Show</button></span>
+      </label>
+      <button class="primary" id="login-btn">Log in</button>
+      <p id="login-error" class="error" role="alert"></p>
+      <div id="demo-hint"><p class="hint">First login: <b>admin</b> / <b>admin123</b> as Librarian</p></div>
+    </form>
+  </section>
+
+  <div id="app-view" class="app hidden">
+    <aside>
+      <div class="brand">Library</div>
+      <nav id="nav"></nav>
+      <div class="who" id="who"></div>
+      <button id="logout">Log out</button>
+    </aside>
+    <main>
+      <h2 id="title"></h2>
+      <div id="msg"></div>
+      <div id="page"></div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
